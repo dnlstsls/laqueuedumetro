@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Kenneth Anderson, Abraham Nkembo Bouesso, Daniel Santos-Sales" />
+
+<meta name="date" content="2025-04-03" />
+
+<title>L’accessibilité des lieux culturels de Paris</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/dnlstsls/laqueuedumetro.git">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">L’accessibilité des lieux culturels de
+Paris</h1>
+<h4 class="author">Kenneth Anderson, Abraham Nkembo Bouesso, Daniel
+Santos-Sales</h4>
+<h4 class="date">2025-04-03</h4>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction"><span
+class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#données" id="toc-données"><span
+class="toc-section-number">2</span> Données</a>
+<ul>
+<li><a href="#chargement-des-libraries-nécessaires"
+id="toc-chargement-des-libraries-nécessaires"><span
+class="toc-section-number">2.1</span> Chargement des <em>libraries</em>
+nécessaires</a></li>
+<li><a href="#importation-des-données"
+id="toc-importation-des-données"><span
+class="toc-section-number">2.2</span> Importation des données</a>
+<ul>
+<li><a href="#le-cadastre" id="toc-le-cadastre"><span
+class="toc-section-number">2.2.1</span> Le cadastre</a></li>
+<li><a href="#loffre-culturelle-générale"
+id="toc-loffre-culturelle-générale"><span
+class="toc-section-number">2.2.2</span> L’offre culturelle
+générale</a></li>
+<li><a href="#les-arrêts-des-réseaux-de-transport"
+id="toc-les-arrêts-des-réseaux-de-transport"><span
+class="toc-section-number">2.2.3</span> Les arrêts des réseaux de
+transport</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#traitements" id="toc-traitements"><span
+class="toc-section-number">3</span> Traitements</a>
+<ul>
+<li><a href="#jointures-attributaires"
+id="toc-jointures-attributaires"><span
+class="toc-section-number">3.1</span> Jointures attributaires</a>
+<ul>
+<li><a href="#jointure-attributaire-cadastre-et-transport"
+id="toc-jointure-attributaire-cadastre-et-transport"><span
+class="toc-section-number">3.1.1</span> Jointure attributaire : cadastre
+et transport</a></li>
+<li><a href="#jointure-attributaire-cadastre-et-culture"
+id="toc-jointure-attributaire-cadastre-et-culture"><span
+class="toc-section-number">3.1.2</span> Jointure attributaire : cadastre
+et culture</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#résultats" id="toc-résultats"><span
+class="toc-section-number">4</span> Résultats</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Notre projet porte sur l’accessibilité des lieux culturels de Paris.
+Le travail va notamment s’intéresser aux différences entre
+arrondissements en termes d’offres culturelles et d’offres de
+transports.</p>
+<p>D’une part, dans quelle mesure l’arrondissement dans lequel on vit
+détermine-t-il le degré d’accès à l’offre culturelle locale ?</p>
+<p>D’autre part, dans quelle mesure les lieux culturels de Paris
+sont-ils desservis via les réseaux de transport ?</p>
+</div>
+<div id="données" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Données</h1>
+<div id="chargement-des-libraries-nécessaires" class="section level2"
+number="2.1">
+<h2><span class="header-section-number">2.1</span> Chargement des
+<em>libraries</em> nécessaires</h2>
+<pre class="r"><code>library(sf)
+library(mapsf)
+library(units)
+library(dplyr)</code></pre>
+</div>
+<div id="importation-des-données" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Importation des
+données</h2>
+<div id="le-cadastre" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Le cadastre</h3>
+<pre class="r"><code># IMPORTER LE CADASTRE DE PARIS
+cadastre &lt;- st_read(&quot;cadastreParis.json&quot;)</code></pre>
+<pre><code>## Reading layer `cadastreParis&#39; from data source 
+##   `/Users/danielsantos-sales/Desktop/Laqueuedumetro/cadastreParis.json&#39; 
+##   using driver `GeoJSON&#39;
+## Simple feature collection with 20 features and 4 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 2.224079 ymin: 48.81558 xmax: 2.469761 ymax: 48.90216
+## Geodetic CRS:  WGS 84</code></pre>
+<pre class="r"><code># AFFICHIER LE CADASTRE DE PARIS
+mf_map(cadastre)
+mf_layout(&quot;Cadastre de Paris&quot;, &quot;cadastre.data.gouv\n2025&quot;)</code></pre>
+<p><img src="index_files/figure-html/Importation%20du%20cadastre-1.png" width="672" /></p>
+<div id="conversion-des-unités-de-surface-de-m2-à-km2"
+class="section level4" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Conversion des
+unités de surface : de m<sup>2</sup> à km<sup>2</sup></h4>
+<pre class="r"><code># INITIALISATION DES CHAMPS CONCERNANT LES SURFACE
+# ET CONVERSION DES UNITÉS DE SURFACE
+cadastre$surface_m2 &lt;- st_area(cadastre)
+cadastre$surface &lt;- set_units(cadastre$surface_m2, km^2)</code></pre>
+</div>
+</div>
+<div id="loffre-culturelle-générale" class="section level3"
+number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> L’offre culturelle
+générale</h3>
+<pre class="r"><code># IMPORTER LES DONNEES DES LIEUX CULTURELS
+data_culture &lt;- read.csv(&quot;culture.csv&quot;, header = TRUE, sep = &quot;;&quot;)</code></pre>
+</div>
+<div id="les-arrêts-des-réseaux-de-transport" class="section level3"
+number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Les arrêts des
+réseaux de transport</h3>
+<pre class="r"><code># IMPORTER LES DONNEES DES ARRETS DE TRANSPORT
+transport &lt;- st_read(&quot;transport.geojson&quot;)</code></pre>
+<pre><code>## Reading layer `transport&#39; from data source 
+##   `/Users/danielsantos-sales/Desktop/Laqueuedumetro/transport.geojson&#39; 
+##   using driver `GeoJSON&#39;
+## Simple feature collection with 37988 features and 15 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 1.149746 ymin: 47.96081 xmax: 3.560668 ymax: 49.45933
+## Geodetic CRS:  WGS 84</code></pre>
+</div>
+</div>
+</div>
+<div id="traitements" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Traitements</h1>
+<div id="jointures-attributaires" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Jointures
+attributaires</h2>
+<div id="jointure-attributaire-cadastre-et-transport"
+class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Jointure
+attributaire : cadastre et transport</h3>
+<pre class="r"><code># FILTRE : SÉLECTION DES ARRÊTS DE TRANSPORTS À PARIS
+transportParis &lt;- transport[substr(transport$arrpostalregion, 1,2) == &quot;75&quot;,]
+
+# INITIALISATION D&#39;UNE CLE COMMUNE ENTRE LES TABLES
+transportParis$cle &lt;- paste0(transportParis$arrpostalregion)
+cadastre$cle &lt;- paste0(cadastre$id)
+
+# JOINTURE
+jointure &lt;- st_join(transportParis, cadastre, join = st_within)
+
+# CALCULLER LA SOMME TOTALE DES ARRÊTS PAR ARRONDISSEMENT
+arrondissement_arrets &lt;- jointure %&gt;% group_by(cle.x) %&gt;% summarise(nb_arrets = n())
+
+# INITIALISATION DE NOUVEAUX CHAMPS CONCERNANT LES TRANSPORTS DANS LA TABLE DU CADASTRE
+cadastre$nb_arrets &lt;- arrondissement_arrets$nb_arrets[match(cadastre$cle, arrondissement_arrets$cle.x)]
+cadastre$densiteTransport &lt;- cadastre$nb_arrets/cadastre$surface</code></pre>
+</div>
+<div id="jointure-attributaire-cadastre-et-culture"
+class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Jointure
+attributaire : cadastre et culture</h3>
+<pre class="r"><code># FILTRE : SÉLECTION DES LIEUX CULTURELS À PARIS
+cultureParis &lt;- data_culture[substr(data_culture$CODE_INSEE, 1,2) == &quot;75&quot;,]
+
+# INITIALISATION D&#39;UNE CLE COMMUNE ENTRE LES TABLES
+cultureParis$cle &lt;- paste0(cultureParis$CODE_INSEE)
+
+# JOINTURE
+join_culture &lt;- merge(cultureParis, cadastre, by = &quot;cle&quot;)
+
+# CALCULLER LA SOMME TOTALE DES LIEUX CULTURELS PAR ARRONDISSEMENT
+arrondissement_lieux &lt;- join_culture %&gt;% group_by(cle) %&gt;% summarise(nb_arrets = n())
+
+# INITIALISATION DE NOUVEAUX CHAMPS CONCERNANT LA CULTURE DANS LA TABLE DU CADASTRE
+cadastre$nb_lieux &lt;- arrondissement_lieux$nb_arrets[match(cadastre$cle, arrondissement_lieux$cle)]
+cadastre$densiteCulture &lt;- cadastre$nb_lieux/cadastre$surface</code></pre>
+</div>
+</div>
+</div>
+<div id="résultats" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Résultats</h1>
+<pre class="r"><code># DÉTERMINER LES DIMENSIONS DE LA MATRICE DE PRÉSENTATION (plots)
+par(mfrow = c(1,2))
+
+# GÉNÉRER LA CARTE DES TRANSPORTS (plot)
+mf_map(cadastre)
+mf_layout(title = &quot;Carte de la densité d&#39;offres de transport public par arrondissement (Paris 2025)&quot;, credits = &quot;Référentiel des arrêts : Arrêts (Île-de-France Mobiités, mai 2025)&quot;)
+mf_map(cadastre, pal = &quot;Burg&quot;, type = &quot;choro&quot;, var = &quot;densiteTransport&quot;, add = TRUE)
+
+# GÉNÉRER LA CARTE DES OFFRES CULTURELLES (plot)
+mf_map(cadastre)
+mf_layout(title = &quot;Carte de la densité d&#39;offres culturelles par arrondissement (Paris 2025)&quot;, credits = &quot;Grand Paris Express et lieux culturels (data.gouv.fr, octobre 2015)&quot;)
+mf_map(cadastre, pal = &quot;Teal&quot;,type = &quot;choro&quot;, var = &quot;densiteCulture&quot;, add = TRUE)</code></pre>
+<p><img src="index_files/figure-html/cartes-1.png" width="672" /></p>
+<p>Pour notre projet final, nous avons choisi de nous intéresser au
+ratio des points d’accès aux transports en commun et à l’offre
+culturelle de Paris. Est-ce que ces lieux sont accessibles à tous les
+résidents de la ville ? Est-ce qu’un type d’offre culturelle est plus
+représentative dans un arrondissement comparativement aux autres ?</p>
+<p>D’après les résultats de la carte que nous avons construite avec R,
+nous constatons que le ratio offre culturelle/points d’accès aux
+transports en commun varie, mais que la plus forte concentration se
+situe dans le centre de Paris. Cela n’est pas surprenant, puisque les
+musées et collections d’art les plus célèbres, les théâtres et les
+salles de spectacle se trouvent dans la partie la plus ancienne et la
+plus dense de la ville. Les 6e et 9e arrondissements affichent les
+ratios les plus élevés de densité de points d’accès aux transports et
+d’offre culturelle.</p>
+<p>En revanche, les 16e et 12e arrondissements affichent les ratios les
+plus faibles pour ces deux points. Cela peut s’expliquer par le fait que
+ces arrondissements contiennent davantage de zones exclusivement
+résidentielles que le reste de Paris, mais qu’ils incluent également les
+bois de Boulogne et de Vincennes. Ces espaces verts, tel qu’ils sont
+inclus dans les données des cadastres Etalab, pourraient avoir contribué
+à une distribution biaisée des points de données pour les points d’accès
+aux transports et l’offre culturelle dans ces arrondissements.</p>
+<p>Ces données nous apprennent que l’accessibilité culturelle à Paris
+n’est pas répartie uniformément entre les arrondissements. Si le
+centre-ville offre une offre culturelle dense et diversifiée, facilement
+accessible via de nombreux points de transport, ce n’est pas le cas en
+périphérie. Cela suggère une disparité potentielle dans l’accès aux
+expériences culturelles, notamment pour les résidents des quartiers
+moins bien desservis.</p>
+<p>Une autre dimension mérite d’être explorée : le type d’offre
+culturelle disponible selon les arrondissements. Le centre de Paris
+abrite des institutions de renommée internationale comme le Louvre ou
+l’Opéra Garnier, tandis que les arrondissements périphériques peuvent
+accueillir des centres culturels plus petits et plus communautaires.
+Cette différenciation pourrait indiquer une inégalité non seulement
+spatiale, mais aussi qualitative, avec des implications pour l’inclusion
+culturelle et la construction identitaire entre les quartiers.</p>
+<p>Des analyses plus approfondies pourraient inclure des superpositions
+démographiques (niveaux de revenus, tranches d’âge, origine migratoire,
+etc.) afin de comparer ces tendances spatiales aux données
+socio-économiques. Il pourrait également être utile d’évaluer
+l’accessibilité temporelle, c’est-à-dire la disponibilité des lieux et
+des transports à des horaires adaptés aux travailleurs ou aux
+familles.</p>
+<p>En conclusion, alors que Paris est mondialement reconnue pour sa
+richesse culturelle et son excellent système de transports en commun,
+cette analyse révèle des modèles nuancés d’accessibilité qui devraient
+être pris en compte dans la planification future des politiques urbaines
+et culturelles.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
