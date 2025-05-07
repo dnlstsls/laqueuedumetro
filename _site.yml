@@ -1,0 +1,5 @@
+name: "Projet R"
+navbar:
+  right:
+    - icon: fa-github
+      href: https://github.com/dnlstsls/laqueuedumetro.git
